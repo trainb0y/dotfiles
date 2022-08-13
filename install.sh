@@ -69,7 +69,7 @@ rm -rf ~/Config/temp
 read -p "Install additional packages? (discord, vscode, firefox, etc.) (Y/n) " -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    yay -S jetbrains-toolbox vscode discord-canary polymc firefox steam 
+    yay -S jetbrains-toolbox neovim vscode discord-canary polymc firefox steam 
 fi
 
 echo Finished!
