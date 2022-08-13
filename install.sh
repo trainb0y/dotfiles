@@ -14,10 +14,12 @@ echo
 sudo pacman -Syu i3-gaps picom btop pavucontrol polybar feh zsh nemo kitty git github-cli maim xclip neofetch bc xdg-desktop-portal-gtk gtk-engines intel-gpu-tools
 echo Installed packages
 
-# Git/GH auth
-echo Configuring git and GitHub
-gh auth setup-git 
-gh auth login
+read -p "Configure GitHub CLI? (Y/n) " -n 1 -r
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    gh auth setup-git 
+    gh auth login
+fi
 
 # Install yay
 echo Installing Yay
