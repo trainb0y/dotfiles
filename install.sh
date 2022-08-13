@@ -1,10 +1,32 @@
 #!/bin/sh
-echo "trainb0y's dotfile installer"
-echo You shouldnt have run this, it will probably break everything
 
-read -p "Are you sure you want to continue? (Y/n)" -n 1 -r
+# ######## Not reccomended for use! #########
+# This is less of an actual installer, and more of a list of steps I did to get stuff running
+# Although it might sort of work, it's more of a refrence material for future me than anything else.
+#
+# No error handling, doesn't check anything, and does some really stupid things along the way
+# Enjoy!
+# - trainb0y
+
+
+echo ----- trainb0y\'s dotfile installer
+echo You shouldnt have run this, it will probably break everything
+echo Like, seriously, unless you want stuff to be broken, quit it.
+echo Don\'t hold me responsible for the outcome of any dumb mistake you might be making
+echo
+read -p "Are you sure you want to continue? (Y/n) " -n 1 -r
 if [[ ! $REPLY =~ ^[Yy]$ ]]
 then
+    echo
+    echo "You made the right choice! o7"
+    exit 1
+fi
+echo
+read -p "Are you *really* sure? This is a bad idea... " -n 1 -r
+if [[ ! $REPLY =~ ^[Yy]$ ]]
+then
+    echo
+    echo "Ok good, for a second there I was worried you would actually do it."
     exit 1
 fi
 echo
@@ -42,18 +64,19 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/p
 echo Symbolic link spam go brrrrrr
 ln -s ~/Config/.zshrc ~/.zshrc 
 ln -s ~/Config/zsh/custom/ ~/.oh-my-zsh/custom
-
 ln -s ~/Config/kitty/kitty.conf ~/.config/kitty/kitty.conf
-
 mkdir ~/.config/i3/
 ln -s ~/Config/i3-gaps.conf ~/.config/i3/config
 
 echo Adding intel gpu commands to NOPASSWD for polybar gpu module 
+echo If you don\'t have an intel gpu this is entirely pointless
 echo THIS MIGHT BREAK THINGS
-sudo sh ~/Config/polybar/nosudo-gpu.sh
-
-# Just to be sure
-chmod +x ~/Config/polybar/*.sh
+read -p "Are you, absolutely *positively* sure you want to do this? " -n 1 -r
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    sudo sh ~/Config/polybar/nosudo-gpu.sh
+fi
+echo
 
 echo Installing themes
 cd ~/Config/temp
@@ -62,12 +85,12 @@ unzip mirage.zip && sudo cp -r Juno-mirage /usr/share/themes/
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark # prefer dark mode
 ln -s ~/Config/gtk3.conf ~/.config/gtk-3.0/settings.ini
 
-echo Installing additional utilities
+echo Installing additional utilities from the AUR
 yay -S ulauncher
 
-echo Removing temporary files
+echo Cleaning up
 rm -rf ~/Config/temp/
-
+chmod +x ~/Config/polybar/*.sh
 
 read -p "Install additional packages? (discord, vscode, firefox, etc.) (Y/n) " -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
