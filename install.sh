@@ -20,6 +20,7 @@ then
     gh auth setup-git 
     gh auth login
 fi
+echo
 
 # Install yay
 echo Installing Yay
@@ -42,7 +43,7 @@ echo Symbolic link spam go brrrrrr
 ln -s ~/Config/.zshrc ~/.zshrc 
 ln -s ~/Config/zsh/custom/ ~/.oh-my-zsh/custom
 
-ln -s ~/Config/kitty.conf ~/.config/kitty/kitty.conf
+ln -s ~/Config/kitty/kitty.conf ~/.config/kitty/kitty.conf
 
 mkdir ~/.config/i3/
 ln -s ~/Config/i3-gaps.conf ~/.config/i3/config
@@ -65,7 +66,7 @@ echo Installing additional utilities
 yay -S ulauncher
 
 echo Removing temporary files
-rm -rf ~/Config/temp
+rm -rf ~/Config/temp/
 
 
 read -p "Install additional packages? (discord, vscode, firefox, etc.) (Y/n) " -n 1 -r
@@ -73,5 +74,5 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
     yay -S jetbrains-toolbox neovim vscode discord-canary polymc firefox steam 
 fi
-
+echo
 echo Finished!
