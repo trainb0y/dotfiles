@@ -33,7 +33,7 @@ echo
 
 
 # Install packages 
-sudo pacman -Syu i3-gaps picom btop pavucontrol polybar feh zsh nemo kitty git github-cli maim xclip neofetch bc xdg-desktop-portal-gtk gtk-engines intel-gpu-tools
+sudo pacman -Syu i3-gaps picom btop autorandr pavucontrol polybar feh zsh nemo kitty git github-cli maim xclip neofetch bc xdg-desktop-portal-gtk gtk-engines intel-gpu-tools
 echo Installed packages
 
 read -p "Configure GitHub CLI? (Y/n) " -n 1 -r
