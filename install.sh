@@ -33,7 +33,7 @@ echo
 
 
 # Install packages 
-sudo pacman -Syu i3-gaps picom btop autorandr pavucontrol polybar feh zsh nemo kitty git github-cli maim xclip neofetch bc xdg-desktop-portal-gtk gtk-engines intel-gpu-tools
+sudo pacman -Syu i3-gaps picom btop chrony autorandr pavucontrol polybar feh zsh nemo kitty git github-cli maim xclip neofetch bc xdg-desktop-portal-gtk gtk-engines intel-gpu-tools
 echo Installed packages
 
 read -p "Configure GitHub CLI? (Y/n) " -n 1 -r
@@ -86,7 +86,11 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark # prefer dark
 ln -s ~/Config/gtk3.conf ~/.config/gtk-3.0/settings.ini
 
 echo Installing additional utilities from the AUR
-yay -S ulauncher
+yay -S ulauncher ttf-twemoji onefetch nemo-fileroller
+
+echo messing with systemd
+sudo systemctl disable systemd-timesyncd.service
+sudo systemctl enable chronyd
 
 echo Cleaning up
 rm -rf ~/Config/temp/
