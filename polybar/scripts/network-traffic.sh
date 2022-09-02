@@ -54,7 +54,7 @@ while true; do
         bytes[past_tx_$interface]=${bytes[now_tx_$interface]}
     done
 
-    echo "D: $(print_bytes $down) | U: $(print_bytes $up)"
+    echo " $(print_bytes $down) |  $(print_bytes $up)"
 
     sleep $INTERVAL
 done

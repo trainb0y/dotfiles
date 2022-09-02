@@ -74,7 +74,8 @@ echo THIS MIGHT BREAK THINGS
 read -p "Are you, absolutely *positively* sure you want to do this? " -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    sudo sh ~/Config/polybar/nosudo-gpu.sh
+    sudo sh ~/Config/polybar/scripts/nosudo-gpu.sh
+    # echo "$USER ALL=(ALL) NOPASSWD: /usr/bin/intel_gpu_top" > /etc/sudoers.d/intelgpu
 fi
 echo
 
