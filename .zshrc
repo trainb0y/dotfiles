@@ -95,8 +95,17 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
+
+alias ll="ls -al"
+alias hist="cat ~/.zsh_history | grep "
+
+# Remembering things is hard
+alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
-alias ll="ls -al"
+alias neovim="nvim"
+
+# Pacman/Yay shortcuts
 alias install="yay -S"
 alias remove="yay -Rns"
+alias update="yay -Syu"
