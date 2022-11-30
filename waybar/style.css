@@ -20,7 +20,7 @@ tooltip {
 #workspaces button {
     background-color: #082A63;
 }
-#workspaces button.focused {
+#workspaces button.active {
     background-color: #1B4C87;
 }
 #cpu {
