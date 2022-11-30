@@ -98,6 +98,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias ll="ls -al"
 alias hist="cat ~/.zsh_history | grep "
+alias mon="hyprctl keyword monitor \"eDP-1, disable\""
 
 # Remembering things is hard
 alias v="nvim"

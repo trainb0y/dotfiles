@@ -33,7 +33,7 @@ echo
 
 
 # Install packages 
-sudo pacman -Syu i3-gaps picom btop chrony autorandr pavucontrol polybar feh zsh nemo kitty git github-cli maim xclip neofetch bc xdg-desktop-portal-gtk gtk-engines intel-gpu-tools
+sudo pacman -Syu swaybg hyprland btop chrony pavucontrol zsh nemo kitty git github-cli neofetch bc xdg-desktop-portal-gtk gtk-engines intel-gpu-tools wl-clipboard
 echo Installed packages
 
 read -p "Configure GitHub CLI? (Y/n) " -n 1 -r
@@ -65,11 +65,9 @@ echo Symbolic link spam go brrrrrr
 ln -s ~/Config/.zshrc ~/.zshrc 
 ln -s ~/Config/zsh/custom/ ~/.oh-my-zsh/custom
 ln -s ~/Config/kitty/kitty.conf ~/.config/kitty/kitty.conf
-mkdir ~/.config/i3/
-ln -s ~/Config/i3-gaps.conf ~/.config/i3/config
-# ln -s ~/Config/hyprland/main.conf ~/.config/hypr/hyprland.conf
-# ln -s ~/Config/waybar/config ~/.config/waybar/config    
-# ln -s ~/Config/waybar/style.css ~/.config/waybar/style.css
+ln -s ~/Config/hyprland/main.conf ~/.config/hypr/hyprland.conf
+ln -s ~/Config/waybar/config ~/.config/waybar/config    
+ln -s ~/Config/waybar/style.css ~/.config/waybar/style.css
 
 
 echo Adding intel gpu commands to NOPASSWD for polybar gpu module 
@@ -91,7 +89,7 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark # prefer dark
 ln -s ~/Config/gtk3.conf ~/.config/gtk-3.0/settings.ini
 
 echo Installing additional utilities from the AUR
-yay -S ulauncher ttf-twemoji onefetch nemo-fileroller
+yay -S ttf-twemoji onefetch nemo-fileroller wofi waybar-hyprland-git grim slurpv
 
 echo messing with systemd
 sudo systemctl disable systemd-timesyncd.service
