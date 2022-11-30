@@ -67,6 +67,10 @@ ln -s ~/Config/zsh/custom/ ~/.oh-my-zsh/custom
 ln -s ~/Config/kitty/kitty.conf ~/.config/kitty/kitty.conf
 mkdir ~/.config/i3/
 ln -s ~/Config/i3-gaps.conf ~/.config/i3/config
+# ln -s ~/Config/hyprland/main.conf ~/.config/hypr/hyprland.conf
+# ln -s ~/Config/waybar/config ~/.config/waybar/config    
+# ln -s ~/Config/waybar/style.css ~/.config/waybar/style.css
+
 
 echo Adding intel gpu commands to NOPASSWD for polybar gpu module 
 echo If you don\'t have an intel gpu this is entirely pointless

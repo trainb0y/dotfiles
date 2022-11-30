@@ -1,0 +1,91 @@
+* {
+    border: none;
+    border-radius: 0;
+    /*font-family: Roboto, Helvetica, Arial, sans-serif;*/
+    font-size: 13px;
+    min-height: 0;
+    padding: 0px 2px;
+}
+
+window#waybar {
+    background: rgba(1, 12, 35, 1);
+    color: #dfdfdf;
+}
+
+tooltip {
+  background: rgba(1, 12, 35, 0.8);
+}
+
+
+#workspaces button {
+    background-color: #082A63;
+}
+#workspaces button.focused {
+    background-color: #1B4C87;
+}
+#cpu {
+    background-color: #082A63;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+#custom-gpu {
+    background-color: #0C326C;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+#memory {
+    background-color: #113B75;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+#disk.home {
+    background-color: #16447E;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+#disk.root {
+    background-color: #1B4C87;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+#pulseaudio {
+    background-color: #205591;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+#network {
+    background-color: #1B4C87;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+#custom-networktraffic {
+    background-color: #16447E;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+#temperature {
+    background-color: #113B75;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+#backlight {
+    background-color: #0C326C;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+#battery {
+    background-color: #082A63;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+#clock {
+    background-color: #082A63;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+#tray {
+    background-color: #082A63;
+    padding-left: 8px;
+    padding-right: 4px;
+}
+
